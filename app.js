@@ -1,8 +1,8 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+require('dotenv').config();
+
+const express = require('express');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const { categoryRouter } = require('./routers/category.router');
 const { bookRouter } = require('./routers/book.router');
 const { routerUser } = require('./routers/user.router');
