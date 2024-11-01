@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-
+require('dotenv').config();
 const { connecteDb }= require( '../database/database');
 
 var app = require('../app');
@@ -91,5 +91,5 @@ async function onListening() {
 
   debug('Listening on ' + bind);
   await connecteDb() ;
-  
+
 }
