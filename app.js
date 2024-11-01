@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -9,8 +7,10 @@ const { routerUser } = require('./routers/user.router');
 const { borrowRouter } = require('./routers/borrow.router');
 const { middlewarePassword } = require('./middleware/password');
 const { statistiqueRouter } = require('./routers/statistique.router');
+const cors = require('cors');
 
 var app = express();
+app.use(cors());
 app.use(express.json());
 app.use(middlewarePassword);
 

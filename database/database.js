@@ -1,5 +1,6 @@
 const pg = require('pg');
 const {Client}=pg;
+
 const client = new Client({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,

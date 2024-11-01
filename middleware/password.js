@@ -6,7 +6,7 @@ const middlewarePassword = function(req,res,next){
   if(passwordHeaders === password){
     next();
   }else{
-    res.status(404).json({message : 'password inccorect'});
+    res.status(401).json({message : 'password inccorect'});
   }
 };
 
